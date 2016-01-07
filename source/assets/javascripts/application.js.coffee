@@ -8,6 +8,7 @@
 #   Components
 # -------------------------------------
 #= require components/_components.fastclick
+#= require components/_components.anchor-navigation
 
 # -------------------------------------
 #   Inbox
