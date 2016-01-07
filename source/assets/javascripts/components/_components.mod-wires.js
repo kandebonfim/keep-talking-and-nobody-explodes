@@ -37,29 +37,29 @@ function solveWires(wires) {
       if (checkForDuplicateValues(wires).length > 0 &&
           checkForDuplicateValues(wires).indexOf('red') > -1 &&
           lastDigitOfSerialNumber % 2 == 1){
-        return 'Cut the last red wire 1';
+        return 'Cut the last red wire!';
       }
 
       // If the last wire is yellow and there are no red wires, cut the first wire.
       else if (wires[wiresLength-1] == 'yellow' &&
                wires.indexOf('red') == -1) {
-        return 'Cut the first wire 2';
+        return 'Cut the first wire!';
       }
 
       // If there is exactly one blue wire, cut the first wire.
       else if (wires.indexOf('blue') > -1 &&
                checkForDuplicateValues(wires).indexOf('blue')) {
-        return 'Cut the first wire! 3';
+        return 'Cut the first wire!';
       }
 
       // If there is more than one yellow wire, cut the last wire.
       else if (checkForDuplicateValues(wires).indexOf('yellow') > -1) {
-        return 'Cut the last wire! 4';
+        return 'Cut the last wire!';
       }
 
       // Otherwise...
       else {
-        return 'Cut the second wire 5';
+        return 'Cut the second wire!';
       }
 
       break;
