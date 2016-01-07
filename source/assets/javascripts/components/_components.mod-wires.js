@@ -63,7 +63,34 @@ function solveWires(wires) {
       }
 
       break;
+
+    // 5 wires
     case 5:
+
+      // If the last wire is black and the last digit of the serial number is odd, cut the fourth wire.
+      if (wires[wiresLength-1] == 'black' &&
+          lastDigitOfSerialNumber % 2 == 1) {
+        return 'Cut the fourth wire!';
+      }
+
+      // If there is exactly one red wire and there is more than one yellow wire, cut the first wire.
+      else if (wires.indexOf('red') > -1 &&
+          checkForDuplicateValues(wires).indexOf('red') &&
+          checkForDuplicateValues(wires).indexOf('yellow') > -1) {
+        return 'Cut the first wire!';
+      }
+
+      // If there are no black wires, cut the second wire.
+      else if (wires.indexOf('black') == -1) {
+        return 'Cut the second wire!';
+      }
+
+      // Otherwise...
+
+      else {
+        return 'Cut the first wire!';
+      }
+
       break;
     case 6:
       break;
