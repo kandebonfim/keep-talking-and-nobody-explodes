@@ -92,7 +92,33 @@ function solveWires(wires) {
       }
 
       break;
+
+    // 6 wires
     case 6:
+
+      // If there are no yellow wires and the last digit of the serial number is odd, cut the third wire.
+      if (wires.indexOf('yellow') == -1 &&
+          lastDigitOfSerialNumber % 2 == 1) {
+        return 'Cut the third wire!';
+      }
+
+      // If there is exactly one yellow wire and there is more than one white wire, cut the fourth wire.
+      else if (wires.indexOf('yellow') > -1 &&
+          checkForDuplicateValues(wires).indexOf('yellow') &&
+          checkForDuplicateValues(wires).indexOf('white') > -1) {
+        return 'Cut the fourth wire!';
+      }
+
+      // If there are no red wires, cut the last wire.
+      if (wires.indexOf('red') == -1){
+        return 'Cut the last wire!';
+      }
+
+      // Otherwise...
+      else {
+        return 'Cut the fourth wire!';
+      }
+
       break;
   }
 }
