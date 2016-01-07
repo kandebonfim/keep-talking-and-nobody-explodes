@@ -9,3 +9,4 @@
 # Fastclick
 # -------------------------------------
 #= require fastclick/lib/fastclick
+#= require jquery/dist/jquery
