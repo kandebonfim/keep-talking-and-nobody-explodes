@@ -1,10 +1,8 @@
 .fullsize-screen
   width: 100vw
   height: 100vh
-  background-color: $color-gray-dark
-
-  &:nth-of-type(odd)
-    background-color: darken($color-gray-dark, 2deg)
+  background-color: $color-fullsize-screen-background
+  border-bottom: 2px solid darken($color-fullsize-screen-background, 5deg)
 
   .row
     display: flex
@@ -12,3 +10,4 @@
 
   .container
     margin: auto
+    text-align: center
