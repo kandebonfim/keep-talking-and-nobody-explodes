@@ -1,0 +1,146 @@
+// sizes
+$switcher-width: 200px
+$switcher-height: $switcher-width / 3
+$switcher-diff-1: $switcher-height * 0.2
+$switcher-diff-inner: $switcher-height * 0.3
+
+$glow-width: $switcher-width - $switcher-diff-inner
+$glow-height: $switcher-height - $switcher-diff-inner
+
+$handler-diff: $glow-width * 0.05
+$handler-width: ($glow-width / 2) + $handler-diff
+$handler-height: $glow-height + $handler-diff
+
+$handler-b-diff: $glow-width * 1.12
+$handler-b-width: $handler-width + $handler-b-diff
+$handler-b-height: $handler-height + $handler-b-diff
+
+$switcher-number-diff: 2.2
+
+// colors
+$switcher-color-up: #B0BEC5
+$switcher-color-down: #90A4AE
+$switcher-color-up-on: #8BC34A
+$switcher-color-down-on: #CDDC39
+
+// transition
+$transition: .4s
+
+.switcher-container
+  display: flex
+  justify-content: center
+
+  & + &
+    margin-top: 16px
+
+.switcher-label, .switcher
+  float: left
+
+.switcher-label
+  margin-top: 20px
+  margin-right: 30px
+  color: $color-gray-light
+
+.switcher
+  width: $switcher-width
+  height: $switcher-height
+  position: relative
+  border-radius: $switcher-height / 2
+  background: linear-gradient($color-45-dark, $color-45-bright)
+  display: inline-flex
+
+  &:before
+    content: ''
+    position: absolute
+    width: $switcher-width - $switcher-diff-1
+    height: $switcher-height - $switcher-diff-1
+    margin: $switcher-diff-1 / 2
+    background: linear-gradient($color-60-bright, $color-60-dark)
+    border-radius: $switcher-height - $switcher-diff-1 / 2
+
+  .glow, .handler
+    transition: .2s ease
+    position: absolute
+
+  .glow
+    width: $glow-width
+    height: $glow-height
+    border-radius: $switcher-height / 2
+    background: linear-gradient(to bottom, $switcher-color-up 0%,$switcher-color-down 50%,$switcher-color-up 100%)
+    margin: $switcher-diff-inner / 2
+    box-shadow: inset 2px 2px 20px 6px rgba(black,.2), inset 0 0 5px 2px rgba(black,.4)
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(to bottom, $switcher-color-up-on 0%,$switcher-color-down-on 50%,$switcher-color-up-on 100%)
+      border-radius: inherit
+      box-shadow: inherit
+      transition: $transition
+      opacity: 0
+
+  .handler
+    width: $handler-width
+    height: $handler-height
+    margin: $handler-diff / -2
+    position: absolute
+    border-radius: $handler-height / 2
+    background: linear-gradient($color-45-bright, $color-45-dark)
+    box-shadow: 2px 2px 4px 2px rgba(black,.2), 0 3px 5px 2px rgba(black,.2)
+    font-size: 12px
+
+    &:after
+      content: 'NO'
+      background: linear-gradient($color-45-dark, $color-45-bright)
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: $handler-width / 1.5
+      height: $handler-height / 2
+      border-radius: $handler-height / 2
+      text-align: center
+      line-height: $handler-height / 2
+      color: #666
+
+.switcher--number
+  width: $switcher-width / $switcher-number-diff
+
+  &:before
+    width: ( $switcher-width / $switcher-number-diff ) - $switcher-diff-1
+
+  .glow
+    width: ( $switcher-width / $switcher-number-diff ) - $switcher-diff-inner
+
+
+input:checked + .glow
+  &:before
+    opacity: 1
+
+  .handler
+    transform: translateX($glow-width / 2)
+
+    &:after
+      content: 'YES'
+
+input
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 1
+  border: none
+  outline: none
+
+input[type="checkbox"]
+  opacity: 0
+
+input[type="number"]
+  color: $color-highlight
+  font-size: 22px
+  font-weight: bolder
+  text-align: center
+  text-shadow: 0 0 6px rgba(black,.4)
+  background-color: transparent
