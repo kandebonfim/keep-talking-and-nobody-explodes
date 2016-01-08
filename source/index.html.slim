@@ -5,43 +5,8 @@
       .hero.text-align-center The Great Interactive Manual
       = link_to 'Defuse the Bomb!', '#batteries-and-serial-number', class: 'btn inline-block'
 
-.fullsize-screen#batteries-and-serial-number
-  .row
-    .container
+= partial '/shared/mods/mod.start'
 
-      .switcher-container
-        .switcher-label The serial number ends with a vogal?
-        .switcher
-          input.js-data-vowel type="checkbox"
-          .glow
-            .handler
-
-      .switcher-container
-        .switcher-label The last digit of the serial number is odd?
-        .switcher
-          input.js-data-last-digit-odd type="checkbox"
-          .glow
-            .handler
-
-      .switcher-container
-        .switcher-label How many battery this bomb have?
-        .switcher.switcher--number
-          input.js-data-last-digit-odd type="number" min="1" max="20" value="0"
-          .glow
-
-.fullsize-screen#wires
-  .row
-    .container
-      .hero.text-align-center The module has <span class='js-wires-number'>no</span> wires!
-
-      .mod-wire-container.inline-block.js-mod-wire-container
-        - for i in (1..6)
-          .mod-wire.inline-block.js-mod-wire
-            .mod-wire__indicator.js-mod-wire-indicator
-              .mod-wire__inner-2
-            .mod-wire__inner
-              .mod-wire__inner-2
-                - for color in ['red', 'white', 'blue', 'yellow', 'black']
-                  .mod-wire__color class='mod-wire__color--#{color} js-mod-wire-color-selector' js-color=color
+= partial '/shared/mods/mod.wires'
 
 .tips.text-align-center.js-tips

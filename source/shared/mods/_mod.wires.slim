@@ -1,0 +1,14 @@
+.fullsize-screen#wires
+  .row
+    .container
+      .hero.text-align-center The module has <span class='js-wires-number'>no</span> wires!
+
+      .mod-wire-container.inline-block.js-mod-wire-container
+        - for i in (1..6)
+          .mod-wire.inline-block.js-mod-wire
+            .mod-wire__indicator.js-mod-wire-indicator
+              .mod-wire__inner-2
+            .mod-wire__inner
+              .mod-wire__inner-2
+                - for color in ['red', 'white', 'blue', 'yellow', 'black']
+                  .mod-wire__color class='mod-wire__color--#{color} js-mod-wire-color-selector' js-color=color
