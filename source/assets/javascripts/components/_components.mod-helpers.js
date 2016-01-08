@@ -8,3 +8,9 @@ function checkForDuplicateValues(arr) {
   }
   return results;
 }
+
+function setTip(text) {
+  $('.js-tips').text(text);
+}
+
+lastDigitOfSerialNumber = 2;

@@ -31,8 +31,6 @@ function solveWires(wires) {
     // 4 wires
     case 4:
 
-      console.log('4!');
-
       // If there is more than one red wire and the last digit of the serial number is odd, cut the last red wire.
       if (checkForDuplicateValues(wires).length > 0 &&
           checkForDuplicateValues(wires).indexOf('red') > -1 &&
@@ -122,3 +120,30 @@ function solveWires(wires) {
       break;
   }
 }
+
+function getWires() {
+  var wires = [];
+  $('.js-mod-wire-container .js-mod-wire').each(function(){
+    var currentColor = $(this).children('.js-mod-wire-indicator').attr('js-color-selected');
+    if (currentColor) {
+      wires.push(currentColor);
+    }
+  });
+
+  $('.js-wires-number').text(wires.length);
+  return wires;
+}
+
+function selectWireColor(el) {
+  var currentColor = $(el).attr('js-color');
+  $(el).parents('.js-mod-wire').children('.js-mod-wire-indicator').attr('js-color-selected', currentColor);
+  $(el).parents('.js-mod-wire').attr('js-color-selected', currentColor);
+
+  $(el).siblings().removeClass('js-color-active');
+  $(el).addClass('js-color-active');
+}
+
+$('.js-mod-wire-color-selector').click(function(){
+  selectWireColor(this);
+  setTip( solveWires( getWires() ) );
+})
