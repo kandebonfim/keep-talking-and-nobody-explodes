@@ -1,4 +1,28 @@
 .fullsize-screen.start-view#start
   .row
     .container
-      = image_tag 'keep-talking-logo.png', width: '400px'
+      = image_tag 'keep-talking-logo.png', width: '400px', height: '103px'
+      h2.hero.text-align-center Ready to defuse the bomb?
+      = link_to 'Defuse the Bomb!', '#batteries-and-serial', class: 'btn btn--secondary inline-block'
+
+.fullsize-screen#batteries-and-serial
+  .row
+    .container
+      h2.hero.text-align-center This section should contain the questions about the batteries and serial number
+
+.fullsize-screen#wires
+  .row
+    .container
+      h2.hero.text-align-center The module has <span class='js-wires-number'>no</span> wires!
+
+      .mod-wire-container.inline-block.js-mod-wire-container
+        - for i in (1..6)
+          .mod-wire.inline-block.js-mod-wire
+            .mod-wire__indicator.js-mod-wire-indicator
+              .mod-wire__inner-2
+            .mod-wire__inner
+              .mod-wire__inner-2
+                - for color in ['red', 'white', 'blue', 'yellow', 'black']
+                  .mod-wire__color class='mod-wire__color--#{color} js-mod-wire-color-selector' js-color=color
+
+.tips.text-align-center.js-tips
