@@ -2,7 +2,7 @@
   .row
     .container
       = image_tag 'keep-talking-logo.png', width: '400px', height: '103px'
-      h2.hero.text-align-center Ready to defuse the bomb?
+      .hero.text-align-center Ready to defuse the bomb?
       = link_to 'Defuse the Bomb!', '#batteries-and-serial', class: 'btn btn--secondary inline-block'
 
 .fullsize-screen#batteries-and-serial
@@ -32,7 +32,7 @@
 .fullsize-screen#wires
   .row
     .container
-      h2.hero.text-align-center The module has <span class='js-wires-number'>no</span> wires!
+      .hero.text-align-center The module has <span class='js-wires-number'>no</span> wires!
 
       .mod-wire-container.inline-block.js-mod-wire-container
         - for i in (1..6)
