@@ -7,7 +7,12 @@ function solveSymbols() {
   });
 }
 
-$(".js-symbol").click(function() {
+function clearSymbols() {
+  $(".js-mod-symbols .js-symbol").removeClass('js-symbol-active');
+  $('.js-mod-symbols .js-mod-symbols-column').removeClass('js-selected-column');
+}
+
+$(".js-mod-symbols .js-symbol").click(function() {
   var symbol = $(this).attr('js-symbol')
   $(".js-symbol[js-symbol="+symbol+"]").toggleClass('js-symbol-active');
   solveSymbols();

@@ -1,4 +1,4 @@
-function solvePassword() {
+function solvePasswords() {
   $(".js-mod-passwords .js-mod-passwords-word").each(function() {
     wordOfInput = $(this).attr('js-data-word');
     arrayOfWordInput = wordOfInput.split('');
@@ -30,6 +30,10 @@ function compareWithInput(char, inputIndex) {
   return result;
 }
 
+function clearPasswords() {
+  $('.js-mod-passwords .js-mod-passwords-input').val('');
+}
+
 $('.js-mod-passwords .js-mod-passwords-input').keyup(function(){
-  solvePassword();
+  solvePasswords();
 });

@@ -143,6 +143,12 @@ function selectWireColor(el) {
   $(el).addClass('js-color-active');
 }
 
+function clearWires() {
+  $('.js-mod-wire-container .js-mod-wire').removeAttr('js-color-selected');
+  $('.js-mod-wire-container .js-mod-wire-indicator').removeAttr('js-color-selected');
+  $('.js-mod-wire-container .js-mod-wire-color-selector').removeClass('js-color-active');
+}
+
 $('.js-mod-wire-color-selector').click(function(){
   selectWireColor(this);
   setTip( solveWires( getWires() ) );
