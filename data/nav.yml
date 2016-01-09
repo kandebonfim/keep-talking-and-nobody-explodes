@@ -5,3 +5,5 @@ navigation:
     slug: 'wires'
   - title: 'Symbols'
     slug: 'symbols'
+  - title: 'Passwords'
+    slug: 'passwords'
