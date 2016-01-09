@@ -16,6 +16,7 @@ $handler-b-width: $handler-width + $handler-b-diff
 $handler-b-height: $handler-height + $handler-b-diff
 
 $switcher-number-diff: 2.2
+$switcher-text-diff: 1.6
 
 // colors
 $switcher-color-up: #B0BEC5
@@ -103,6 +104,7 @@ $switcher-color-down-on: #CDDC39
       color: #666
 
 .switcher--number
+  font-size: 22px
   width: $switcher-width / $switcher-number-diff
 
   &:before
@@ -111,6 +113,20 @@ $switcher-color-down-on: #CDDC39
   .glow
     width: ( $switcher-width / $switcher-number-diff ) - $switcher-diff-inner
 
+.switcher--text
+  font-size: 18px
+  width: $switcher-width / $switcher-text-diff
+
+  &:before
+    width: ( $switcher-width / $switcher-text-diff ) - $switcher-diff-1
+
+  .glow
+    width: ( $switcher-width / $switcher-text-diff ) - $switcher-diff-inner
+
+  input[type="text"]
+    text-transform: uppercase
+
+.switcher--text
 
 input:checked + .glow
   &:before
@@ -133,9 +149,8 @@ input
 input[type="checkbox"]
   opacity: 0
 
-input[type="number"]
+input[type="number"], input[type="text"]
   color: $color-highlight
-  font-size: 22px
   font-weight: bolder
   text-align: center
   text-shadow: 0 0 6px rgba(black,.4)
