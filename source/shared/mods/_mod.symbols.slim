@@ -17,6 +17,6 @@
               - for j in (1..7)
                 - symbol = symbols[tileIndex]
                 .mod-symbols__item class="js-symbol" js-symbol="#{symbol}"
-                  = image_tag "http://www.bombmanual.com/manual/1/html/img/symbols/#{symbol}.png", class: 'symbols__img', width: '60px', height: '60px'
+                  = image_tag "symbols/#{symbol}.png", class: 'symbols__img', width: '60px', height: '60px'
                 - tileIndex = tileIndex + 1
 
