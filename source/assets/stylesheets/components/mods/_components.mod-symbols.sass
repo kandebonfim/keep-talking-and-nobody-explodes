@@ -20,6 +20,7 @@ $tile-size: 60px
   height: $tile-size
   margin: -1px 0
   border: 1px solid $color-blue-up
+  transition: $transition
 
   .js-selected-column &
     border-color: darken($color-blue-up, 15deg)
@@ -29,6 +30,7 @@ $tile-size: 60px
 
 .symbols__img
   opacity: .7
+  transition: $transition
 
   .js-selected-column &
     opacity: 0
