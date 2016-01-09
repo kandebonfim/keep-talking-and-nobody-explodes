@@ -1,0 +1,7 @@
+navigation:
+  - title: 'Know your bomb'
+    slug: 'know-your-bomb'
+  - title: 'Wires'
+    slug: 'wires'
+  - title: 'Symbols'
+    slug: 'symbols'
