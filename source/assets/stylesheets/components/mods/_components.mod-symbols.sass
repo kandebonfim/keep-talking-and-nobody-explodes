@@ -1,0 +1,37 @@
+$tile-size: 60px
+
+.mod-symbols
+  font-size: 0
+
+.mod-symbols__column
+  width: $tile-size
+  display: inline-flex
+  margin: 0 10px
+
+  .column-wrapper
+    position: relative
+    display: block
+
+    &.js-selected-column
+      background-color: darken($color-blue-up, 15deg)
+
+.mod-symbols__item
+  width: $tile-size
+  height: $tile-size
+  margin: -1px 0
+  border: 1px solid $color-blue-up
+
+  .js-selected-column &
+    border-color: darken($color-blue-up, 15deg)
+
+  &.js-symbol-active
+    background-color: $color-blue-up
+
+.symbols__img
+  opacity: .7
+
+  .js-selected-column &
+    opacity: 0
+
+  .js-symbol-active &
+    opacity: .7 !important
