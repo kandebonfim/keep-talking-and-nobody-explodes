@@ -15,7 +15,6 @@ function solvePassword() {
       $(this).removeClass('js-word-active');
       $(this).addClass('js-word-inactive');
     }
-    console.log(compareArray);
   });
 }
 
@@ -23,13 +22,10 @@ function compareWithInput(char, inputIndex) {
   var currentInputValArray = $('.js-mod-passwords .js-mod-passwords-input:eq('+inputIndex+')').val().split('');
   if (currentInputValArray.length == 0) {
     var result = 'empty'
-    // console.log('input '+inputIndex+' vazio');
   } else if (currentInputValArray.indexOf(char) > -1) {
     var result = 'found'
-    // console.log("char "+char+" encontrado no input "+inputIndex);
   } else {
     var result = 'not-found'
-    // console.log("char "+char+" não encontrado no input "+inputIndex);
   }
   return result;
 }
