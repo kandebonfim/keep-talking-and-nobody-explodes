@@ -5,7 +5,7 @@ var vennIntersections = {
   red: [1, 3, 5, 7, 9, 11, 13, 15]
 }
 
-function addAttributesToSvg() {
+function compWiresAddAttributesToSvg() {
   for (var key in vennIntersections) {
       var intersections = vennIntersections[key];
 
@@ -15,7 +15,7 @@ function addAttributesToSvg() {
   }
 }
 
-function questionReorder() {
+function compWiresQuestionReorder() {
   $('.js-mod-comp-wires .js-mod-comp-wires-question').each(function(){
     if ($(this).find('.js-small-switcher-active').attr('answer') == 'y') {
       $(this).prependTo($('.js-mod-comp-wires-questions-container'));
@@ -23,7 +23,7 @@ function questionReorder() {
   })
 }
 
-function addAnswerToVisualization() {
+function compWiresAddAnswerToVisualization() {
   $('.js-mod-comp-wires .js-mod-comp-wires-question-getter').each(function(){
     var currentQuestion = $(this).attr('question');
     var currentAnswer = $(this).children('.js-small-switcher-active').attr('answer');
@@ -38,10 +38,10 @@ function addAnswerToVisualization() {
 $('.js-mod-comp-wires .js-mod-comp-wires-option').click(function(){
   $(this).siblings().removeClass('js-small-switcher-active');
   $(this).addClass('js-small-switcher-active');
-  questionReorder();
-  addAnswerToVisualization();
+  compWiresQuestionReorder();
+  compWiresAddAnswerToVisualization();
 })
 
 setTimeout(function(){
-  addAttributesToSvg();
+  compWiresAddAttributesToSvg();
 }, 500);
