@@ -42,12 +42,14 @@ function compWiresCheckAnswers() {
     if (activeIntersections.length == 1) {
       var winnerLetter = $('.js-intersection[active]').attr('letter');
       setTip( solveCompWires(winnerLetter) );
-    };
+    } if else (activeIntersections.length == 0) {
+      var winnerLetter = undefined;
+      setTip( solveCompWires(winnerLetter) )
+    }
   };
 }
 
 function solveCompWires(letter) {
-  console.log(letter);
   switch (letter) {
     case 'c':
       return 'Cut the wire!'
@@ -71,6 +73,8 @@ function solveCompWires(letter) {
       } else {
         return 'Do not the wire!'
       }
+    default:
+      return 'Cut the wire!'
   }
 }
 
