@@ -74,6 +74,11 @@ function solveCompWires(letter) {
   }
 }
 
+function clearCompWires() {
+  $('.js-intersection').removeAttr('active');
+  $('.js-mod-comp-wires .js-mod-comp-wires-option').removeClass('js-small-switcher-active');
+}
+
 $('.js-mod-comp-wires .js-mod-comp-wires-option').click(function(){
   $(this).siblings().removeClass('js-small-switcher-active');
   $(this).addClass('js-small-switcher-active');
