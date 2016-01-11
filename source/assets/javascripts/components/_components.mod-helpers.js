@@ -12,5 +12,3 @@ function checkForDuplicateValues(arr) {
 function setTip(text) {
   $('.js-tips').text(text);
 }
-
-lastDigitOfSerialNumber = 2;

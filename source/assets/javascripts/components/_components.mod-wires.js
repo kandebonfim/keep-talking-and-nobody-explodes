@@ -34,7 +34,7 @@ function solveWires(wires) {
       // If there is more than one red wire and the last digit of the serial number is odd, cut the last red wire.
       if (checkForDuplicateValues(wires).length > 0 &&
           checkForDuplicateValues(wires).indexOf('red') > -1 &&
-          lastDigitOfSerialNumber % 2 == 1){
+          globalData.serial_odd == true){
         return 'Cut the last red wire!';
       }
 
@@ -67,7 +67,7 @@ function solveWires(wires) {
 
       // If the last wire is black and the last digit of the serial number is odd, cut the fourth wire.
       if (wires[wiresLength-1] == 'black' &&
-          lastDigitOfSerialNumber % 2 == 1) {
+          globalData.serial_odd == true) {
         return 'Cut the fourth wire!';
       }
 
@@ -96,7 +96,7 @@ function solveWires(wires) {
 
       // If there are no yellow wires and the last digit of the serial number is odd, cut the third wire.
       if (wires.indexOf('yellow') == -1 &&
-          lastDigitOfSerialNumber % 2 == 1) {
+          globalData.serial_odd == true) {
         return 'Cut the third wire!';
       }
 

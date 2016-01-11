@@ -15,7 +15,6 @@ function updateKnowYourBomb() {
       globalData[question] = parseInt($(this).val());
     }
   });
-  // console.log(globalData);
 }
 
 $('.js-mod-know-your-bomb .js-mod-know-your-bomb-input').click(function(event) {
