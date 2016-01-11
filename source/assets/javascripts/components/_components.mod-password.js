@@ -32,6 +32,7 @@ function compareWithInput(char, inputIndex) {
 
 function clearPasswords() {
   $('.js-mod-passwords .js-mod-passwords-input').val('');
+  solvePasswords();
 }
 
 $('.js-mod-passwords .js-mod-passwords-input').keyup(function(){
