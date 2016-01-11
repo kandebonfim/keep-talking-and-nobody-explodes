@@ -3,6 +3,8 @@ navigation:
     slug: 'know-your-bomb'
   - title: 'Wires'
     slug: 'wires'
+  - title: 'Complicated Wires'
+    slug: 'complicated-wires'
   - title: 'Symbols'
     slug: 'symbols'
   - title: 'Passwords'

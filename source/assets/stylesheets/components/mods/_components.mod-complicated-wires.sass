@@ -1,0 +1,38 @@
+.mod-comp-wires
+
+.mod-comp-wires__venn-diagram
+  margin-top: 20px
+
+.mod-comp-wires__question
+  position: absolute
+
+  &--blue
+    top: 50px
+    right: -30px
+
+  &--red
+    top: 50px
+    left: -30px
+
+  &--star
+    top: 110px
+    left: -80px
+
+  &--led
+    top: 110px
+    right: -80px
+
+  .question-text
+    font-size: 14px
+    min-width: 100px
+
+  .small-switcher
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+.mod-comp-wires__intersection
+  fill: transparent
+
+  &[active]
+    fill: $color-blue-up
