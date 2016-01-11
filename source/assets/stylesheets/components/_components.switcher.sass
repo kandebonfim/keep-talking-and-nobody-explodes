@@ -155,3 +155,31 @@ input[type="number"], input[type="text"]
   text-align: center
   text-shadow: 0 0 6px rgba(black,.4)
   background-color: transparent
+
+.small-switcher
+  .small-switcher__option
+    width: 20px
+    height: 20px
+    float: left
+    border: 1px solid $color-blue-up
+    color: $color-blue-up
+    font-size: 10px
+    line-height: 1.7
+    font-weight: bolder
+
+    &:hover, &.js-small-switcher-active
+      background-color: $color-blue-up
+      color: $color-fullsize-screen-background
+
+    &:first-of-type
+      border-radius: 4px 0 0 4px
+      border-right-width: 0
+
+      &:before
+        content: 'Y'
+
+    &:last-of-type
+      border-radius: 0 4px 4px 0
+
+      &:before
+        content: 'N'
