@@ -1,0 +1,21 @@
+.fullsize-screen#complicated-wires
+  .mod-headings
+    .mod-headings__title Complicated Wires!
+
+  .row
+    .container
+      .hero.text-align-center This wire:
+
+      .mod-comp-wires.js-mod-comp-wires
+
+        - for question in [['red', 'is red coloured?'], ['blue', 'is blue coloured?'], ['star', 'has a star?'], ['led', 'the LED is on?']]
+          .mod-comp-wires__question class="mod-comp-wires__question--#{question[0]}"
+            .question-text = question[1]
+            .small-switcher.js-mod-comp-wires-question-getter question=question[0]
+              .small-switcher__option.js-mod-comp-wires-option answer="y"
+              .small-switcher__option.js-mod-comp-wires-option answer="n"
+
+
+        = image_tag 'complicated-wires/venndiagram.svg', class: 'mod-comp-wires__venn-diagram js-svg'
+
+      .mod-clear.text-align-center onclick="clearWires()" Clear
