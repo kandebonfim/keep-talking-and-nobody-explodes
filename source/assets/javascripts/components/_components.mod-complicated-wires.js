@@ -41,11 +41,10 @@ function compWiresCheckAnswers() {
     var activeIntersections = $('.js-intersection[active]');
     if (activeIntersections.length == 1) {
       var winnerLetter = $('.js-intersection[active]').attr('letter');
-      setTip( solveCompWires(winnerLetter) );
-    } if else (activeIntersections.length == 0) {
+    } else if (activeIntersections.length == 0) {
       var winnerLetter = undefined;
-      setTip( solveCompWires(winnerLetter) )
     }
+    setTip( solveCompWires(winnerLetter), '.js-mod-comp-wires-tips' )
   };
 }
 
@@ -81,6 +80,7 @@ function solveCompWires(letter) {
 function clearCompWires() {
   $('.js-intersection').removeAttr('active');
   $('.js-mod-comp-wires .js-mod-comp-wires-option').removeClass('js-small-switcher-active');
+  $('.js-mod-comp-wires-tips').text('');
 }
 
 $('.js-mod-comp-wires .js-mod-comp-wires-option').click(function(){

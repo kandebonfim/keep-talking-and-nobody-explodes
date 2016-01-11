@@ -9,6 +9,6 @@ function checkForDuplicateValues(arr) {
   return results;
 }
 
-function setTip(text) {
-  $('.js-tips').text(text);
+function setTip(text, container) {
+  $(container).text(text);
 }
