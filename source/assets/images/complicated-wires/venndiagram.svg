@@ -4,48 +4,48 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="419.223px" height="314.5px" viewBox="0 0 419.223 314.5" enable-background="new 0 0 419.223 314.5" xml:space="preserve">
 <g>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="1"  fill="transparent" d="M154.763,91.838c6.316-7.814,13.223-15.515,20.701-22.992c10.699-10.699,21.852-20.238,33.146-28.529
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="1" letter="s"  fill="transparent" d="M154.763,91.838c6.316-7.814,13.223-15.515,20.701-22.992c10.699-10.699,21.852-20.238,33.146-28.529
 		C154.972,0.941,98.09-10.225,70.992,16.874c-9.425,9.424-14.211,22.457-14.803,37.696C84.402,53.476,120.195,66.792,154.763,91.838
 		z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="2"  fill="transparent" d="M262.459,91.838c34.566-25.045,70.359-38.361,98.574-37.268c-0.592-15.241-5.379-28.272-14.803-37.696
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="2" letter="s"  fill="transparent" d="M262.459,91.838c34.566-25.045,70.359-38.361,98.574-37.268c-0.592-15.241-5.379-28.272-14.803-37.696
 		c-27.098-27.098-83.98-15.931-137.62,23.442c11.295,8.291,22.448,17.83,33.147,28.529
 		C249.236,76.325,256.143,84.023,262.459,91.838z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="3"  fill="transparent" d="M154.763,91.838c11.755,8.517,23.371,18.384,34.496,29.508c6.949,6.95,13.405,14.091,19.353,21.337
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="3" letter="s"  fill="transparent" d="M154.763,91.838c11.755,8.517,23.371,18.384,34.496,29.508c6.949,6.95,13.405,14.091,19.353,21.337
 		c5.948-7.246,12.403-14.387,19.354-21.337c11.125-11.125,22.738-20.991,34.494-29.508c-6.316-7.814-13.224-15.515-20.701-22.992
 		c-10.699-10.699-21.853-20.238-33.147-28.529c-11.295,8.291-22.447,17.83-33.146,28.529
 		C167.987,76.325,161.079,84.023,154.763,91.838z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="4"  fill="transparent" d="M161.189,254.415c-15.241-0.592-28.272-5.377-37.697-14.803c-14.539-14.539-18.055-37.656-12.118-64.242
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="4" letter="c"  fill="transparent" d="M161.189,254.415c-15.241-0.592-28.272-5.377-37.697-14.803c-14.539-14.539-18.055-37.656-12.118-64.242
 		C74.861,134.458,54.858,88.901,56.189,54.571c-15.241,0.591-28.272,5.379-37.697,14.804
 		c-32.804,32.803-9.535,109.257,51.972,170.765c45.833,45.832,99.96,70.426,138.146,66.414c-13.061-1.371-24.26-6.082-32.619-14.441
 		C166.568,282.688,161.78,269.657,161.189,254.415z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="5"  fill="transparent" d="M111.374,175.37c5.83-26.106,20.782-55.559,43.389-83.533C120.195,66.792,84.402,53.476,56.189,54.57
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="5" letter="c"  fill="transparent" d="M111.374,175.37c5.83-26.106,20.782-55.559,43.389-83.533C120.195,66.792,84.402,53.476,56.189,54.57
 		C54.858,88.901,74.861,134.46,111.374,175.37z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="6"  fill="transparent" d="M165.178,222.538c-14.379-9.649-28.66-21.344-42.213-34.898c-4.031-4.03-7.894-8.127-11.59-12.27
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="6" letter="d"  fill="transparent" d="M165.178,222.538c-14.379-9.649-28.66-21.344-42.213-34.898c-4.031-4.03-7.894-8.127-11.59-12.27
 		c-5.937,26.586-2.421,49.703,12.118,64.242c9.425,9.426,22.457,14.213,37.697,14.803
 		C160.808,244.585,162.174,233.837,165.178,222.538z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="7"  fill="transparent" d="M165.178,222.538c6.718-25.27,21.618-53.275,43.433-79.855c-5.947-7.246-12.403-14.387-19.353-21.337
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="7" letter="p"  fill="transparent" d="M165.178,222.538c6.718-25.27,21.618-53.275,43.433-79.855c-5.947-7.246-12.403-14.387-19.353-21.337
 		c-11.125-11.125-22.74-20.991-34.496-29.509c-22.608,27.975-37.559,57.426-43.389,83.533c3.697,4.143,7.559,8.239,11.59,12.271
 		C136.518,201.194,150.799,212.888,165.178,222.538z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="8"  fill="transparent" d="M398.731,69.374c-9.426-9.425-22.457-14.212-37.697-14.804c1.332,34.331-18.674,79.888-55.186,120.798
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="8" letter="d"  fill="transparent" d="M398.731,69.374c-9.426-9.425-22.457-14.212-37.697-14.804c1.332,34.331-18.674,79.888-55.186,120.798
 		c5.938,26.588,2.422,49.703-12.117,64.244c-9.426,9.424-22.457,14.211-37.697,14.803c-0.591,15.24-5.379,28.271-14.802,37.697
 		c-8.36,8.358-19.56,13.068-32.62,14.44c38.188,4.012,92.314-20.582,138.146-66.414C408.266,178.632,431.534,102.178,398.731,69.374
 		z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="9"  fill="transparent" d="M252.045,222.538c3.004,11.299,4.369,22.047,3.988,31.877c15.241-0.592,28.271-5.377,37.697-14.803
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="9" letter="b"  fill="transparent" d="M252.045,222.538c3.004,11.299,4.369,22.047,3.988,31.877c15.241-0.592,28.271-5.377,37.697-14.803
 		c14.539-14.539,18.057-37.656,12.117-64.242c-3.697,4.143-7.559,8.239-11.59,12.27
 		C280.704,201.194,266.424,212.888,252.045,222.538z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="10" fill="transparent"  d="M262.459,91.838c22.605,27.974,37.557,57.425,43.389,83.532c36.514-40.91,56.518-86.467,55.186-120.798
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="10" letter="p" fill="transparent"  d="M262.459,91.838c22.605,27.974,37.557,57.425,43.389,83.532c36.514-40.91,56.518-86.467,55.186-120.798
 		C332.819,53.477,297.026,66.792,262.459,91.838z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="11" fill="transparent"  d="M227.965,121.347c-6.949,6.95-13.406,14.091-19.354,21.337c21.815,26.58,36.715,54.586,43.435,79.854
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="11" letter="s" fill="transparent"  d="M227.965,121.347c-6.949,6.95-13.406,14.091-19.354,21.337c21.815,26.58,36.715,54.586,43.435,79.854
 		c14.379-9.648,28.658-21.344,42.213-34.897c4.029-4.03,7.893-8.126,11.59-12.271c-5.83-26.105-20.783-55.558-43.389-83.532
 		C250.703,100.354,239.09,110.222,227.965,121.347z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="12" fill="transparent"  d="M256.033,254.415c-14.251,0.553-30.437-2.57-47.422-9.026c-16.985,6.456-33.17,9.579-47.422,9.026
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="12" letter="b" fill="transparent"  d="M256.033,254.415c-14.251,0.553-30.437-2.57-47.422-9.026c-16.985,6.456-33.17,9.579-47.422,9.026
 		c0.591,15.24,5.379,28.272,14.803,37.697c8.36,8.36,19.56,13.069,32.619,14.44c13.06-1.37,24.26-6.08,32.62-14.44
 		C250.654,282.688,255.443,269.657,256.033,254.415z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="13" fill="transparent"  d="M252.045,222.538c-14.597,9.795-29.289,17.475-43.435,22.851c16.987,6.456,33.171,9.579,47.422,9.026
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="13" letter="b" fill="transparent"  d="M252.045,222.538c-14.597,9.795-29.289,17.475-43.435,22.851c16.987,6.456,33.171,9.579,47.422,9.026
 		C256.415,244.585,255.049,233.837,252.045,222.538z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="14" fill="transparent"  d="M161.189,254.415c14.251,0.553,30.437-2.57,47.422-9.026c-14.144-5.376-28.838-13.056-43.434-22.851
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="14" letter="p" fill="transparent"  d="M161.189,254.415c14.251,0.553,30.437-2.57,47.422-9.026c-14.144-5.376-28.838-13.056-43.434-22.851
 		C162.174,233.837,160.808,244.585,161.189,254.415z"/>
-	<path class="mod-comp-wires__intersection js-intersection" js-data-int="15" fill="transparent"  d="M208.611,142.683c-21.813,26.58-36.714,54.586-43.434,79.855c14.596,9.795,29.291,17.475,43.434,22.851
+	<path class="mod-comp-wires__intersection js-intersection" js-data-int="15" letter="d" fill="transparent"  d="M208.611,142.683c-21.813,26.58-36.714,54.586-43.434,79.855c14.596,9.795,29.291,17.475,43.434,22.851
 		c14.144-5.376,28.838-13.056,43.435-22.851C245.326,197.27,230.426,169.264,208.611,142.683z"/>
 </g>
 <g>
