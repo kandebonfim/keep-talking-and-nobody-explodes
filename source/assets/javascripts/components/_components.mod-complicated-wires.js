@@ -5,7 +5,7 @@ var vennIntersections = {
   red: [1, 3, 5, 7, 9, 11, 13, 15]
 }
 
-function addClassesToSvg() {
+function addAttributesToSvg() {
   for (var key in vennIntersections) {
       var intersections = vennIntersections[key];
 
@@ -33,5 +33,5 @@ $('.js-mod-comp-wires .js-mod-comp-wires-option').click(function(){
 })
 
 setTimeout(function(){
-  addClassesToSvg();
+  addAttributesToSvg();
 }, 500);
