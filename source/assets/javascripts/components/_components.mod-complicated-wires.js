@@ -15,21 +15,31 @@ function addAttributesToSvg() {
   }
 }
 
-function addAnswerToVisualization(trigger) {
-  var currentQuestion = $(trigger).parents('.js-mod-comp-wires-question-getter').attr('question');
-  var currentAnswer = $(trigger).attr('answer');
-  $(trigger).siblings().removeClass('js-small-switcher-active');
-  $(trigger).addClass('js-small-switcher-active');
-  if (currentAnswer == 'y') {
-    $('.js-intersection['+currentQuestion+']').attr('active', '')
-  } else {
-    $('.js-intersection['+currentQuestion+']').removeAttr('active')
-  }
-  console.log(currentQuestion);
+function questionReorder() {
+  $('.js-mod-comp-wires .js-mod-comp-wires-question').each(function(){
+    if ($(this).find('.js-small-switcher-active').attr('answer') == 'y') {
+      $(this).prependTo($('.js-mod-comp-wires-questions-container'));
+    };
+  })
+}
+
+function addAnswerToVisualization() {
+  $('.js-mod-comp-wires .js-mod-comp-wires-question-getter').each(function(){
+    var currentQuestion = $(this).attr('question');
+    var currentAnswer = $(this).children('.js-small-switcher-active').attr('answer');
+    if (currentAnswer == 'y') {
+      $('.js-intersection['+currentQuestion+']').attr('active', '')
+    } else if (currentAnswer == 'n') {
+      $('.js-intersection['+currentQuestion+']').removeAttr('active')
+    }
+  });
 }
 
 $('.js-mod-comp-wires .js-mod-comp-wires-option').click(function(){
-  addAnswerToVisualization(this);
+  $(this).siblings().removeClass('js-small-switcher-active');
+  $(this).addClass('js-small-switcher-active');
+  questionReorder();
+  addAnswerToVisualization();
 })
 
 setTimeout(function(){

@@ -8,12 +8,13 @@
 
       .mod-comp-wires.js-mod-comp-wires
 
-        - for question in [['red', 'is red coloured?'], ['blue', 'is blue coloured?'], ['star', 'has a star?'], ['led', 'the LED is on?']]
-          .mod-comp-wires__question class="mod-comp-wires__question--#{question[0]}"
-            .question-text = question[1]
-            .small-switcher.js-mod-comp-wires-question-getter question=question[0]
-              .small-switcher__option.js-mod-comp-wires-option answer="y"
-              .small-switcher__option.js-mod-comp-wires-option answer="n"
+        .js-mod-comp-wires-questions-container
+          - for question in [['red', 'is red coloured?'], ['blue', 'is blue coloured?'], ['star', 'has a star?'], ['led', 'the LED is on?']]
+            .mod-comp-wires__question.js-mod-comp-wires-question class="mod-comp-wires__question--#{question[0]}"
+              .question-text = question[1]
+              .small-switcher.js-mod-comp-wires-question-getter question=question[0]
+                .small-switcher__option.js-mod-comp-wires-option answer="y"
+                .small-switcher__option.js-mod-comp-wires-option answer="n"
 
 
         = image_tag 'complicated-wires/venndiagram.svg', class: 'mod-comp-wires__venn-diagram js-svg'
