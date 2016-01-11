@@ -35,11 +35,51 @@ function compWiresAddAnswerToVisualization() {
   });
 }
 
+function compWiresCheckAnswers() {
+  var answeredQuestion = $('.js-mod-comp-wires .js-small-switcher-active');
+  if (answeredQuestion.length == 4) {
+    var activeIntersections = $('.js-intersection[active]');
+    if (activeIntersections.length == 1) {
+      var winnerLetter = $('.js-intersection[active]').attr('letter');
+      setTip( solveCompWires(winnerLetter) );
+    };
+  };
+}
+
+function solveCompWires(letter) {
+  console.log(letter);
+  switch (letter) {
+    case 'c':
+      return 'Cut the wire!'
+    case 'd':
+      return 'Do not the wire!'
+    case 's':
+      if (globalData.serial_odd == false) {
+        return 'Cut the wire!'
+      } else {
+        return 'Do not the wire!'
+      }
+    case 'p':
+      if (globalData.parallel_port == true) {
+        return 'Cut the wire!'
+      } else {
+        return 'Do not the wire!'
+      }
+    case 'b':
+      if (globalData.battery_number > 2) {
+        return 'Cut the wire!'
+      } else {
+        return 'Do not the wire!'
+      }
+  }
+}
+
 $('.js-mod-comp-wires .js-mod-comp-wires-option').click(function(){
   $(this).siblings().removeClass('js-small-switcher-active');
   $(this).addClass('js-small-switcher-active');
   compWiresQuestionReorder();
   compWiresAddAnswerToVisualization();
+  compWiresCheckAnswers();
 })
 
 setTimeout(function(){
