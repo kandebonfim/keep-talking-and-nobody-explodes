@@ -9,3 +9,5 @@ navigation:
     slug: 'symbols'
   - title: 'Passwords'
     slug: 'passwords'
+  - title: 'Maze'
+    slug: 'maze'

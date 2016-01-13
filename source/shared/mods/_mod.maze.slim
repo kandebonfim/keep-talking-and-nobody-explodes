@@ -1,0 +1,21 @@
+.fullsize-screen#maze
+  .mod-headings
+    .mod-headings__title Maze!
+
+  .row
+    .container
+      .hero.text-align-center Select the green circles on the map
+
+      .mod-maze.js-maze
+        - for i in (1..6)
+          .mod-maze__column
+            .column-wrapper
+              - for j in (1..6)
+                .mod-maze__item.js-maze-area x=i y=j
+
+        - for k in (0..8)
+          = image_tag "http://www.bombmanual.com/manual/1/html/img/gen/maze/maze#{k}.svg", class: "mod-maze__maps js-maze-index-#{k}"
+
+      .mod-clear.text-align-center onclick="" Clear
+
+      .mod-tips.text-align-center.js-mod-wires-tips

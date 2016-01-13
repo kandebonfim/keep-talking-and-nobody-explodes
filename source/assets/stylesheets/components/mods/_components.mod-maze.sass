@@ -1,0 +1,43 @@
+$tile-size: 60px
+
+.mod-maze
+  font-size: 0
+  position: relative
+
+.mod-maze__maps
+  width: 100%
+  height: 100%
+  top: 0
+  position: absolute
+  opacity: 0
+  left: 0
+  visibility: hidden
+
+  &.js-maze-active
+    visibility: visible
+    opacity: 1
+
+.mod-maze__column
+  width: $tile-size
+  display: inline-flex
+
+  &:last-of-type
+    .mod-maze__item
+      border-right-width: 1px
+
+  .column-wrapper
+    position: relative
+    display: block
+
+.mod-maze__item
+  width: $tile-size
+  height: $tile-size
+  border: 1px solid $color-blue-up
+  border-right-width: 0
+  transition: $transition
+
+  & + &
+    border-top-width: 0
+
+  &.js-maze-area-active
+    background-color: $color-positive
