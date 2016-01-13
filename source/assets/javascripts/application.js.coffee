@@ -16,6 +16,7 @@
 #= require components/_components.mod-complicated-wires.js
 #= require components/_components.mod-symbols.js
 #= require components/_components.mod-password.js
+#= require components/_components.mod-maze.js
 
 # -------------------------------------
 #   Inbox
