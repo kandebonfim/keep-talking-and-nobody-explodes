@@ -33,6 +33,13 @@ function compWiresAddAnswerToVisualization() {
       $('.js-intersection['+currentQuestion+']').removeAttr('active')
     }
   });
+  $('.js-mod-comp-wires .js-mod-comp-wires-question-getter').each(function(){
+    var currentQuestion = $(this).attr('question');
+    var currentAnswer = $(this).children('.js-small-switcher-active').attr('answer');
+    if (currentAnswer == 'y') {
+      $('.js-intersection').not('['+currentQuestion+']').removeAttr('active', '')
+    }
+  });
 }
 
 function compWiresCheckAnswers() {
