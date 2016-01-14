@@ -8,7 +8,7 @@ var mazes = {
   x1y1: 3,
   x1y4: 3,
   x5y3: 4,
-  x6y6: 4,
+  x4y6: 4,
   x5y1: 5,
   x3y5: 5,
   x2y1: 6,
@@ -19,16 +19,78 @@ var mazes = {
   x3y2: 8
 }
 
-function solveMaze() {
-  var currentArea = $('.js-maze .js-maze-area.js-maze-area-active');
-  var x = $(currentArea).attr('x');
-  var y = $(currentArea).attr('y');
-  var currentMaze = mazes['x'+x+'y'+y];
-  $('.js-maze-index-'+currentMaze).addClass('js-maze-active');
-  // console.log(currentMaze);
+var mazeStage = 1;
+
+function findMaze(el) {
+  var currentArea = $(el);
+  var area = $(currentArea).attr('area');
+  var currentMaze = mazes[area];
+  if (currentMaze) {
+    findMazeAreasForMaze(currentMaze);
+    $('.js-maze-index-'+currentMaze).addClass('js-maze-active');
+    mazeStage = 2;
+  } else {
+    setTip('There is no maze with green area in that position.', '.js-mod-maze-tips', 2000)
+  }
+}
+
+function findMazeAreasForMaze(currentMaze) {
+  var activeAreas = [];
+  for (var key in mazes) {
+    if (mazes[key] == currentMaze) {
+      activeAreas.push(key);
+    }
+  }
+  $('.js-maze-area[area="'+activeAreas[0]+'"]').addClass('js-maze-area-active');
+  $('.js-maze-area[area="'+activeAreas[1]+'"]').addClass('js-maze-area-active');
+  $('.js-maze .js-maze-map-container').addClass('js-maze-map-found');
+}
+
+function setUserLocation(el) {
+  $(el).addClass('js-maze-user-active');
+  mazeStage = 3;
+}
+
+function setTargetLocation(el) {
+  $(el).addClass('js-maze-target-active');
+  mazeStage = 4;
+}
+
+function setMazeOnboarding() {
+  var message = '';
+  switch(mazeStage){
+    case 1:
+      message = "Select the green circles on the map";
+      break;
+    case 2:
+      message = "Select the square position";
+      break;
+    case 3:
+      message = "Select the triangle position";
+      break;
+    case 4:
+      message = "Tell the directions for your partner";
+      break;
+  }
+  $('.js-maze-hero').text(message);
+}
+
+function clearMaze() {
+  $('.js-maze-area-active').removeClass('js-maze-area-active');
+  $('.js-maze-map').removeClass('js-maze-active');
 }
 
 $('.js-maze .js-maze-area').click(function(){
-  $(this).addClass('js-maze-area-active');
-  solveMaze();
+  switch(mazeStage){
+    case 1:
+      findMaze(this);
+      break;
+    case 2:
+      setUserLocation(this);
+      break;
+    case 3:
+      setTargetLocation(this);
+      break;
+  }
+  setMazeOnboarding();
 })

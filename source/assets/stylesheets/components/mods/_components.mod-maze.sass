@@ -39,5 +39,59 @@ $tile-size: 60px
   & + &
     border-top-width: 0
 
+  .js-maze-map-found &
+    border-color: rgba(black, .4) !important
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    border-radius: 50%
+    border: 2px solid rgba(black, .7)
+    left: 0
+
+  &:before
+    display: none
+
+  &:after
+    width: 8px
+    height: 8px
+    margin: 26px
+    border-width: 1px
+    background-color: grey
+
   &.js-maze-area-active
-    background-color: $color-positive
+    &:before, &:after
+      display: block
+
+    &:before
+      width: 38px
+      height: 38px
+      margin: 11px
+      box-shadow: 0 0 6px 2px #76FF03, inset 0 0 5px 1px rgba(black, .8)
+      background-color: #76FF03
+
+  &.js-maze-user-active
+    &:before
+      display: block
+      width: 20px
+      height: 20px
+      margin: 20px
+      border-radius: 0
+
+  &.js-maze-target-active
+    &:before
+      display: block
+      width: 0
+      height: 0
+      margin: 17px 15px
+      border-style: solid
+      border-radius: 0
+      border-width: 0 15px 26.0px 15px
+      border-color: transparent transparent #F44336 transparent
+      animation: spin 10s linear infinite
+
+@keyframes spin
+  0%
+    transform: rotate(0deg) translateY(-5px)
+  100%
+    transform: rotate(360deg) translateY(-5px)

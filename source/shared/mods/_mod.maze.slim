@@ -4,18 +4,19 @@
 
   .row
     .container
-      .hero.text-align-center Select the green circles on the map
+      .hero.text-align-center.js-maze-hero Select the green circles on the map
 
       .mod-maze.js-maze
-        - for i in (1..6)
-          .mod-maze__column
-            .column-wrapper
-              - for j in (1..6)
-                .mod-maze__item.js-maze-area x=i y=j
-
         - for k in (0..8)
-          = image_tag "http://www.bombmanual.com/manual/1/html/img/gen/maze/maze#{k}.svg", class: "mod-maze__maps js-maze-index-#{k}"
+          = image_tag "http://www.bombmanual.com/manual/1/html/img/gen/maze/maze#{k}.svg", class: "mod-maze__maps js-maze-map js-maze-index-#{k}"
 
-      .mod-clear.text-align-center onclick="" Clear
+        .js-maze-map-container
+          - for i in (1..6)
+            .mod-maze__column
+              .column-wrapper
+                - for j in (1..6)
+                  .mod-maze__item.js-maze-area x=i y=j area="x#{i}y#{j}"
 
-      .mod-tips.text-align-center.js-mod-wires-tips
+      .mod-clear.text-align-center onclick="clearMaze()" Clear
+
+      .mod-tips.text-align-center.js-mod-maze-tips
