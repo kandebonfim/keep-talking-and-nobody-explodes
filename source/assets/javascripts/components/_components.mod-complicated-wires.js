@@ -59,28 +59,34 @@ function solveCompWires(letter) {
   switch (letter) {
     case 'c':
       return 'Cut the wire!'
+      break;
     case 'd':
       return 'Do not the wire!'
+      break;
     case 's':
       if (globalData.serial_odd == false) {
         return 'Cut the wire!'
       } else {
         return 'Do not the wire!'
       }
+      break;
     case 'p':
       if (globalData.parallel_port == true) {
         return 'Cut the wire!'
       } else {
         return 'Do not the wire!'
       }
+      break;
     case 'b':
       if (globalData.battery_number > 2) {
         return 'Cut the wire!'
       } else {
         return 'Do not the wire!'
       }
+      break;
     default:
       return 'Cut the wire!'
+      break;
   }
 }
 
