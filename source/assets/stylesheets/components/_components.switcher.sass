@@ -128,7 +128,7 @@ $switcher-color-down-on: #CDDC39
 
 .switcher--text
 
-input:checked + .glow
+.switcher-container input:checked + .glow
   &:before
     opacity: 1
 
@@ -138,7 +138,7 @@ input:checked + .glow
     &:after
       content: 'YES'
 
-input
+.switcher-container input
   position: absolute
   width: 100%
   height: 100%
@@ -146,10 +146,10 @@ input
   border: none
   outline: none
 
-input[type="checkbox"]
+.switcher-container input[type="checkbox"]
   opacity: 0
 
-input[type="number"], input[type="text"]
+.switcher-container input[type="number"], input[type="text"]
   color: $color-highlight
   font-weight: bolder
   text-align: center
