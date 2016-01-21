@@ -17,6 +17,7 @@
 #= require components/mod/_mod.symbols.js
 #= require components/mod/_mod.password.js
 #= require components/mod/_mod.maze.js
+#= require components/mod/_mod.morse-code.js
 
 # -------------------------------------
 #   Inbox

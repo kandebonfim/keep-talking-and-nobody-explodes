@@ -11,3 +11,5 @@ navigation:
     slug: 'passwords'
   - title: 'Maze'
     slug: 'maze'
+  - title: 'Morse Code'
+    slug: 'morse-code'
