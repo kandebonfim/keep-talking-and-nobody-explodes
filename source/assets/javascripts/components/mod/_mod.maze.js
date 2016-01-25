@@ -78,6 +78,9 @@ function setMazeOnboarding() {
 function clearMaze() {
   $('.js-maze-area-active').removeClass('js-maze-area-active');
   $('.js-maze-map').removeClass('js-maze-active');
+  $('.js-maze-user-active').removeClass('js-maze-user-active');
+  $('.js-maze-target-active').removeClass('js-maze-target-active');
+  mazeStage = 1;
 }
 
 $('.js-maze .js-maze-area').click(function(){
