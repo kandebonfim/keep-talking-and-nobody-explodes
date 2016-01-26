@@ -1,13 +1,15 @@
 .fullsize-screen#morse-code
   .mod-headings
-    .mod-headings__title Passwords!
+    .mod-headings__title Morse code!
 
   .row
     .container
-      .hero.text-align-center Insert the 6 possible letters on each input
+      .hero.text-align-center Type <strong>S</strong> for short lights, <strong>L</strong> for the long ones and <strong>SPACE</strong> for pauses.
 
-      .mod-morse-code
-        input value="-- . ... ... .- --. ."
-        .js-mod-morse-code-input -- . ... ... .- --. .
+      .mod-morse
+        .mod-morse__key-container
+          .mod-morse__letter
+            .mod-morse__digit.mod-morse__digit--dot
+            .mod-morse__digit.mod-morse__digit--dash
 
         .mod-clear.text-align-center onclick="clearPasswords()" Clear
