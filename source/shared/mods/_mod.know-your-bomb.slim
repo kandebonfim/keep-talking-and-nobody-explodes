@@ -6,16 +6,18 @@
     .container
 
       .js-mod-know-your-bomb
-        - for question in [['serial_vogal', 'The serial number ends with a vogal?'], ['serial_odd', 'The last digit of the serial number is odd?'], ['parallel_port', 'Your bomb has a parallel port?']]
-          .switcher-container
-            .switcher-label = question[1]
-            .switcher
-              input.js-mod-know-your-bomb-input js-global-question="#{question[0]}" type="checkbox"
-              .glow
-                .handler
+        - data.know_your_bomb.questions.each do |question|
+          - if question.type == 'boolean'
+            .switcher-container
+              .switcher-label = question.title
+              .switcher
+                input.js-mod-know-your-bomb-input js-global-question="#{question.slug}" type="checkbox"
+                .glow
+                  .handler y="#{question.positive}" n="#{question.negative}"
 
-        .switcher-container
-          .switcher-label How many batteries your bomb have?
-          .switcher.switcher--number
-            input.js-mod-know-your-bomb-input js-global-question="battery_number" type="number" min="1" max="20" value="0"
-            .glow
+          - if question.type == 'number'
+            .switcher-container
+              .switcher-label = question.title
+              .switcher.switcher--number
+                input.js-mod-know-your-bomb-input js-global-question="#{question.slug}" type="number" min="#{question.minimum}" max="#{question.maximum}" value="0"
+                .glow
