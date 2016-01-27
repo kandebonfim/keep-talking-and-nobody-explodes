@@ -10,13 +10,13 @@
 - [x] Symbols
 - [x] Passwords
 - [x] Maze
-- [ ] Buttons
-- [ ] Simon Says
-- [ ] Morse
-- [ ] Knobs
-- [ ] Sequence Wires
-- [ ] Memory
-- [ ] Who's on First
+- [ ] Buttons (Release Date on <strong>Feb 10, 2016</strong>)
+- [ ] Simon Says (soon)
+- [ ] Morse (soon)
+- [ ] Knobs (soon)
+- [ ] Sequence Wires (soon)
+- [ ] Memory (soon)
+- [ ] Who's on First (soon)
 
 ---
 
