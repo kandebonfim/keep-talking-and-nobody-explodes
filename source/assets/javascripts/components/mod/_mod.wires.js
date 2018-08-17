@@ -102,7 +102,7 @@ function solveWires(wires) {
 
       // If there is exactly one yellow wire and there is more than one white wire, cut the fourth wire.
       else if (wires.indexOf('yellow') > -1 &&
-          checkForDuplicateValues(wires).indexOf('yellow') &&
+          checkForDuplicateValues(wires).indexOf('yellow') == -1 &&
           checkForDuplicateValues(wires).indexOf('white') > -1) {
         return 'Cut the fourth wire!';
       }
